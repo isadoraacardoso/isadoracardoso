@@ -1,0 +1,284 @@
+@import "styles/variables.scss";
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(-100%);
+    background: white;
+    color: rgb(51, 51, 51);
+  }
+
+  100% {
+    transform: translateX(0);
+    color: white;
+    background: linear-gradient(45deg, #7223cf, #da2eb8);
+  }
+}
+
+@keyframes balance {
+  0% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-primary;
+
+  .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+  }
+
+  .logo-container{
+
+    .logo-text{
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+
+    .logo-text-bold{
+      font-weight: 600;
+      font-size: 24px;
+    }
+    }
+  }
+
+  .menu-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    a{
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+        transition: all 500ms;
+      }
+    }
+  }
+
+  button{
+    border-radius: 24px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+
+    div{
+      padding: 16px 24px;
+      height: 100%;
+      width: 100%;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-face-white{
+      background-color: white;
+      color: rgb(51, 51, 51);
+      z-index: 998;
+    }
+
+    .btn-face-purple{
+      display: none;
+      z-index: 999;
+      position: absolute;
+      top: 0;
+    }
+
+    &:hover{
+      .btn-face-purple{
+        display: flex;
+        animation: appear 300ms linear 150ms forwards;
+      }
+  }
+}
+.content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-grow: 1;
+
+  h1{
+    font-size: 52px;
+  }
+
+  .bubble{    
+    background:  #351348;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.fire{
+      right: 20px;
+      transform: rotate(-20deg);
+      bottom: 30%;
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+    }
+    &.rocket{
+      top: 20%;
+      right: 100px;
+      font-size: 42px;
+      width: 80px;
+      height: 80px;
+    }
+    &.shop{
+      left: 5%;
+      transform: rotate(30deg);
+      bottom: 20%;
+      font-size: 36px;
+      width: 70px;
+      height: 70px;
+    }
+    &.target{
+      left: 150px;
+      transform: rotate(30deg);
+      top: 10%;
+      font-size: 72px;
+      animation: balance 1000ms alternate 400ms infinite;
+      width: 120px;
+      height: 120px;
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header-container {
+  
+    padding: 16px;
+  }
+
+  .logo-container {
+    margin-bottom: 16px;
+  }
+
+  .menu-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 36px; // Reduzir o tamanho da fonte em telas menores
+    }
+  }
+
+  .bubble {
+    &.fire {
+      right: 10px;
+      bottom: 20%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    &.rocket {
+      right: 50px;
+      font-size: 30px;
+      width: 60px;
+      height: 60px;
+    }
+    &.shop {
+      left: 2%;
+      bottom: 15%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+    }
+    &.target {
+      left: 100px;
+      top: 5%;
+      width: 80px;
+      height: 80px;
+      font-size: 48px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px;
+  }
+
+  .menu-options {
+    font-size: 14px; // Reduzir o tamanho da fonte ainda mais
+  }
+
+  .content-container {
+    h1 {
+      font-size: 28px; // Tamanho da fonte ainda menor
+    }
+  }
+
+  .bubble {
+    &.fire {
+      right: 5px;
+      bottom: 15%;
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+    &.rocket {
+      right: 30px;
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+    }
+    &.shop {
+      left: 1%;
+      bottom: 10%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    &.target {
+      left: 70px;
+      top: 3%;
+      width: 60px;
+      height: 60px;
+      font-size: 36px;
+    }
+  }
+}
+
+}
