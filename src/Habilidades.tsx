@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.scss';
+import './Habilidades.scss';
 
-function App() {
+function Habilidades() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,9 +26,9 @@ function App() {
         </div>
 
         <nav className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <a href="#Sobre">Sobre</a>
-          <a href="#Projetos">Projetos</a>
-          <a href="#Habilidades">Habilidades</a>
+          <a href="">Sobre</a>
+          <a href="">Projetos</a>
+          <a href="">Habilidades</a>
         </nav>
 
         <button className={`menu-options ${isOpen ? 'active' : ''}`}>
@@ -41,17 +41,8 @@ function App() {
         </button>
       </header>
 
-      <div className='content-container'>
-        <h1>Olá,<br />Eu sou Isadora <br />Desenvolvedora Front End</h1>
-        <div className='bubble target'>🎯</div>
-        <div className='bubble shop'>🛍️</div>
-        <div className='bubble rocket'>🔥</div>
-        <div className='bubble fire'>🚀</div>
-      </div>
-
-      
     </main>
   );
 }
 
-export default App;
+export default Habilidades;
