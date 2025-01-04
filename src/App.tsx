@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.scss';
 
+
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,9 +28,9 @@ function App() {
         </div>
 
         <nav className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <a href="#Sobre">Sobre</a>
-          <a href="#Projetos">Projetos</a>
-          <a href="#Habilidades">Habilidades</a>
+          <a>Sobre</a>
+          <a>Projetos</a>
+          <a>Habilidades</a>
         </nav>
 
         <button className={`menu-options ${isOpen ? 'active' : ''}`}>
