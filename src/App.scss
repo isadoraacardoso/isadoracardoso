@@ -196,6 +196,7 @@ main {
   justify-content: center;
   position: relative;
   flex-grow: 1;
+  min-height: 80vh;
 
   h1{
     font-size: 52px;
@@ -349,5 +350,92 @@ main {
     }
   }
 }
+
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  font-size: 30px;
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap; // Permite quebrar linha quando necessário
+  }
+
+  .hidden {
+    background: #351348;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      height: auto; // Mantém a proporção da imagem
+    }
+  }
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+@media (max-width: 1024px) {
+  .habilidades {
+    font-size: 24px; // Reduz o tamanho do texto em telas menores
+  }
+
+  .logos {
+    gap: 15px; // Reduz o espaço entre os itens
+    padding: 30px; // Ajusta o espaçamento
+  }
+
+  .hidden {
+    padding: 8%; // Reduz o tamanho do elemento
+  }
+}
+
+@media (max-width: 768px) {
+  .habilidades {
+    padding-top: 60px;
+    font-size: 20px; // Ajusta o tamanho do texto
+  }
+
+  .logos {
+    gap: 10px; // Reduz ainda mais o espaço
+    padding: 20px;
+  }
+
+  .hidden {
+    padding: 10%; // Ajusta o tamanho do círculo
+  }
+}
+
+@media (max-width: 480px) {
+  .habilidades {
+    padding-top: 40px;
+    font-size: 18px;
+  }
+
+  .logos {
+    flex-direction: column; // Alinha os itens em uma coluna
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .hidden {
+    padding: 15%; // Ajusta o tamanho para telas muito pequenas
+  }
+}
+
+
 
 }

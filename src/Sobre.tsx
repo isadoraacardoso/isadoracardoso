@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
-import Habilidades from './Habilidades';
-import Projetos from './Projetos';
-import Sobre from './Sobre';
 
 
 
-function App() {
+
+function Sobre() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,7 +12,7 @@ function App() {
   };
 
   return (
-    <Router>
+    
     <main>
       <header className='header-container'>
         <div className='logo-container'>
@@ -33,9 +30,9 @@ function App() {
         </div>
 
         <nav className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <a><Link to="/sobre">Sobre</Link></a>
-          <a><Link to="/projetos">Projetos</Link></a>
-          <a><Link to="/habilidades">Habilidades</Link></a>
+          <a>Sobre</a>
+          <a>Projetos</a>
+          <a>Habilidades</a>
         </nav>
 
         <button className={`menu-options ${isOpen ? 'active' : ''}`}>
@@ -48,24 +45,13 @@ function App() {
         </button>
       </header>
 
-      <div className='content-container'>
-        <h1>Olá,<br />Eu sou Isadora <br />Desenvolvedora Front End</h1>
-        <div className='bubble target'>🎯</div>
-        <div className='bubble shop'>🛍️</div>
-        <div className='bubble rocket'>🔥</div>
-        <div className='bubble fire'>🚀</div>
-      </div>
+    
 
-
-      <Routes>
-        <Route path="/habilidades" element={<Habilidades/>} />
-        <Route path="/projetos" element={<Projetos/>} />
-        <Route path="/sobre" element={<Sobre/>} />
-      </Routes>
+      
     </main>
-    </Router>
-
+   
   );
 }
 
-export default App;
+
+export default Sobre;
