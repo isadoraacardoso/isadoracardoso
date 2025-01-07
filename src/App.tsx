@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'rea
 import Habilidades from './Habilidades';
 import Projetos from './Projetos';
 import Sobre from './Sobre';
+import Contato from './Contato';
+import Index from './index';
 
 
 
@@ -21,8 +23,9 @@ function App() {
         <div className='logo-container'>
           <img src="./" alt="" />
           <div className='logo-text'>
-            <span className='logo-text-bold'>Isadora</span>
-            <span className='logo-text-bold'>Cardoso</span>
+            <Link to='/index'>
+            <a className='logo-text-bold'>Isadora <br />Cardoso</a>
+            </Link>
           </div>
         </div>
 
@@ -33,36 +36,40 @@ function App() {
         </div>
 
         <nav className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <a><Link to="/sobre">Sobre</Link></a>
-          <a><Link to="/projetos">Projetos</Link></a>
-          <a><Link to="/habilidades">Habilidades</Link></a>
+          <a ><Link to="/sobre">Sobre</Link></a>
+          <a ><Link to="/projetos">Projetos</Link></a>
+          <a ><Link to="/habilidades">Habilidades</Link></a>
         </nav>
 
+        <Link to='/contato'>
         <button className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <div className='btn-face-white'>
+          <div className='btn-face-white'> 
             Contato 
           </div>
           <div className='btn-face-purple'>
             Contato
           </div>
         </button>
+        </Link>
+        
       </header>
-
-      <div className='content-container'>
-        <h1>Olá,<br />Eu sou Isadora <br />Desenvolvedora Front End</h1>
-        <div className='bubble target'>🎯</div>
-        <div className='bubble shop'>🛍️</div>
-        <div className='bubble rocket'>🔥</div>
-        <div className='bubble fire'>🚀</div>
-      </div>
-
-
+      
       <Routes>
+        <Route path="/index" element={<Index/>} />
         <Route path="/habilidades" element={<Habilidades/>} />
         <Route path="/projetos" element={<Projetos/>} />
         <Route path="/sobre" element={<Sobre/>} />
+        <Route path="/contato" element={<Contato/>} />
       </Routes>
     </main>
+
+      <footer className='footer'>
+        <div >
+          <p>&copy; 2025 Portfólio. Todos os direitos reservados. </p> 
+            <p>Desenvolvido por <a href="https://github.com/isadoraacardoso"> Isadora Cardoso</a>.</p>
+        </div>
+      </footer>
+
     </Router>
 
   );

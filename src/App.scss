@@ -49,6 +49,7 @@ main {
     padding: 24px;
   }
 
+
   .logo-container{
 
     .logo-text{
@@ -57,9 +58,22 @@ main {
       justify-content: center;
       flex-direction: column;
 
+      a{
+        text-decoration: none;
+      }
+
     .logo-text-bold{
+      text-decoration: none;
       font-weight: 600;
       font-size: 24px;
+
+      &:hover{
+        background: linear-gradient(45deg, #7223cf, #da2eb8);
+        -webkit-background-clip: text; /* Usa o fundo para recortar o texto */
+        -webkit-text-fill-color: transparent; /* Torna o interior do texto transparente para exibir o gradiente */
+        cursor: pointer;
+        }
+     
     }
     }
   }
@@ -82,7 +96,7 @@ main {
     align-items: center;
     gap: 12px;
   
-    a {
+    a{
       font-weight: 500;
       font-size: 16px;
       text-decoration: none;
@@ -94,6 +108,7 @@ main {
         transition: all 500ms;
       }
     }
+
     button{
       border-radius: 24px;
       border: none;
@@ -102,6 +117,7 @@ main {
       background-color: transparent;
       overflow: hidden;
       position: relative;
+      
   
       div{
         padding: 16px 24px;
@@ -359,6 +375,10 @@ main {
   padding-top: 80px;
   font-size: 30px;
 
+  h1{
+    padding-bottom: 30px;
+  }
+
   .logos {
     display: flex;
     flex-direction: row;
@@ -436,6 +456,66 @@ main {
   }
 }
 
+.contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  font-size: 30px;
 
+  h1{
+    padding-bottom: 30px;
+  }
 
+  .link-contato {
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    text-decoration: none; /* Remove a sublinhado dos links */
+    padding: 15px 0; /* Espaçamento entre os itens */
+    color: white;
+  }
+
+  .link-contato svg {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 30px;
+    fill: currentColor; /* Faz o ícone herdar a cor do texto */
+  }
+
+  .link-contato p {
+    margin: 0; /* Remove o espaçamento padrão do parágrafo */
+    font-size: 22px; /* Ajuste o tamanho da fonte conforme necessário */
+  }
+
+  .link-contato:hover {
+    color:  $color-primary;
+  }
+}
+
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-primary;
+  padding: 5px;
+
+  div{
+    border-top: 0.5px solid white;
+    width: 80%;
+    padding: 10px;
+  }
+
+  p{
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
 }

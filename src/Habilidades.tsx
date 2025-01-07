@@ -39,9 +39,6 @@ function Habilidades() {
 
       </div>
     </section>
-
-    
-
     
     </main>
    
