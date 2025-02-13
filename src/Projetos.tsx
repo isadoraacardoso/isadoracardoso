@@ -14,38 +14,17 @@ function Projetos() {
   return (
    
     <main>
-      <header className='header-container'>
-        <div className='logo-container'>
-          <img src="./" alt="" />
-          <div className='logo-text'>
-            <span className='logo-text-bold'>Isadora</span>
-            <span className='logo-text-bold'>Cardoso</span>
-          </div>
+         <section className='container'>
+        <div className='title'>
+          <h2>Projetos</h2>
         </div>
-
-        <div className='menu-toggle' onClick={toggleMenu}>
-          <span className='bar'></span>
-          <span className='bar'></span>
-          <span className='bar'></span>
+        <div className='section'>
+          
         </div>
-
-        <nav className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <a>Sobre</a>
-          <a>Projetos</a>
-          <a>Habilidades</a>
-        </nav>
-
-        <button className={`menu-options ${isOpen ? 'active' : ''}`}>
-          <div className='btn-face-white'>
-            Contato 
-          </div>
-          <div className='btn-face-purple'>
-            Contato
-          </div>
-        </button>
-      </header>
-
-    
+        <div className='btn-inferior'>
+        <button>Currículo</button>
+        </div>
+      </section>
 
     </main>
    
