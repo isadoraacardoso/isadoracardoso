@@ -5,37 +5,40 @@ import "./App.scss";
 const projeto = [
   {
     name: "HTML",
-    image:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
-    description: "Descrição do projeto 1 ",
+    image: "pubilc/Captura de tela 2025-03-29 104710.png",
+    description:
+      "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis  ",
     link: "https://youtube.com",
   },
   {
     name: "CSS",
-    image:
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
-    description: "Descrição do projeto 1 ",
+    image: "pubilc/Captura de tela 2025-03-29 104710.png",
+    description:
+      "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis   ",
     link: "https://youtube.com",
   },
   {
     name: "JavaScript",
     image:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
-    description: "Descrição do projeto 1 ",
+    description:
+      "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis  ",
     link: "https://youtube.com",
   },
   {
     name: "TypeScript",
     image:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg",
-    description: "Descrição do projeto 1 ",
+    description:
+      "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis  ",
     link: "https://youtube.com",
   },
   {
     name: "React",
     image:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
-    description: "Descrição do projeto 1",
+    description:
+      "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis  ",
     link: "https://youtube.com",
   },
 ];
@@ -61,12 +64,7 @@ function Projetos() {
         <div className="section">
           <div className="carousel">
             <div className="skill">
-              <img
-                src={projeto[index].image}
-                alt={projeto[index].name}
-                height="50"
-                width="50"
-              />
+              <img src={projeto[index].image} alt={projeto[index].name} />
               <h3>{projeto[index].name}</h3>
               <p>{projeto[index].description}</p>
               <a
@@ -79,15 +77,15 @@ function Projetos() {
               </a>
             </div>
           </div>
-        </div>
 
-        <div className="btn-inferior-seta">
-          <button onClick={prevSkill}>
-            <ChevronLeft size={24} />
-          </button>
-          <button onClick={nextSkill}>
-            <ChevronRight size={24} />
-          </button>
+          <div className="btn-inferior-seta">
+            <button onClick={prevSkill} className="btn-carousel">
+              👈
+            </button>
+            <button onClick={nextSkill} className="btn-carousel">
+              👉
+            </button>
+          </div>
         </div>
       </section>
     </main>
