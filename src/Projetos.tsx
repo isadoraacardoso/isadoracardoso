@@ -5,7 +5,7 @@ import "./App.scss";
 const projeto = [
   {
     name: "HTML",
-    image: "pubilc/Captura de tela 2025-03-29 104710.png",
+    image: "pubilc/Captura de tela 2025-03-29 102657.png",
     description:
       "Uma plataforma digital web3 para tokenizar ações/ações de empresas. Esses ativos podem ser fungíveis ou não fungíveis  ",
     link: "https://youtube.com",
@@ -63,29 +63,33 @@ function Projetos() {
 
         <div className="section">
           <div className="carousel">
+            <span onClick={prevSkill} className="btn-carousel">
+              <ChevronLeft size={40}></ChevronLeft>
+            </span>
+
             <div className="skill">
               <img src={projeto[index].image} alt={projeto[index].name} />
               <h3>{projeto[index].name}</h3>
               <p>{projeto[index].description}</p>
-              <a
-                href={projeto[index].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-link"
-              >
-                Ver Projeto <ExternalLink size={16} />
-              </a>
             </div>
-          </div>
 
-          <div className="btn-inferior-seta">
-            <button onClick={prevSkill} className="btn-carousel">
-              👈
-            </button>
-            <button onClick={nextSkill} className="btn-carousel">
-              👉
-            </button>
+            <span onClick={nextSkill} className="btn-carousel">
+              <ChevronRight size={40}></ChevronRight>
+            </span>
           </div>
+        </div>
+
+        <div className="btn-inferior">
+          <button>
+            <a
+              href={projeto[index].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-link"
+            >
+              Ver Projeto <ExternalLink size={16} />
+            </a>
+          </button>
         </div>
       </section>
     </main>
