@@ -67,7 +67,7 @@ function Projetos() {
               <ChevronLeft size={40}></ChevronLeft>
             </span>
 
-            <div className="skill">
+            <div className="projetos">
               <img src={projeto[index].image} alt={projeto[index].name} />
               <h3>{projeto[index].name}</h3>
               <p>{projeto[index].description}</p>

@@ -53,13 +53,6 @@ function Habilidades() {
                 width="50"
               />
               <p>{habilidades[index].name}</p>{" "}
-              <img
-                src={habilidades[index].icon}
-                alt={habilidades[index].name}
-                height="50"
-                width="50"
-              />
-              <p>{habilidades[index].name}</p>
             </div>
           </div>
         </div>
