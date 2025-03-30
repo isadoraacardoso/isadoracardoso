@@ -607,6 +607,8 @@ main {
 
     .btn-carousel {
       font-size: 2rem; /* Diminui ainda mais os botões */
+      width: 25px;
+      height: 25px;
     }
 
     .skill img {
@@ -618,13 +620,10 @@ main {
     .carousel {
       gap: 5px;
     }
-
     .btn-carousel {
-      font-size: 1.5rem; /* Deixa os botões menores para telas muito pequenas */
-    }
-
-    .skill img {
-      max-width: 250px;
+      z-index: 10;
+      pointer-events: all;
+      margin: -40px;
     }
   }
 }
