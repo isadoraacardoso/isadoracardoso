@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./App.scss";
 
@@ -23,17 +23,39 @@ const habilidades = [
     name: "React",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
+  {
+    name: "Node.js",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+  },
 ];
 
 function Habilidades() {
-  const [index, setIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
 
-  const prevSkill = () => {
-    setIndex((prev) => (prev === 0 ? habilidades.length - 1 : prev - 1));
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth <= 480) {
+        setItemsPerPage(2);
+      } else if (window.innerWidth <= 768) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(5);
+      }
+    };
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
+  const nextSlide = () => {
+    setStartIndex((prev) => (prev + 1) % habilidades.length);
   };
 
-  const nextSkill = () => {
-    setIndex((prev) => (prev === habilidades.length - 1 ? 0 : prev + 1));
+  const prevSlide = () => {
+    setStartIndex(
+      (prev) => (prev - 1 + habilidades.length) % habilidades.length
+    );
   };
 
   return (
@@ -42,26 +64,30 @@ function Habilidades() {
         <div className="title">
           <h2>Habilidades</h2>
         </div>
-
         <div className="section">
           <div className="carousel">
-            <div className="skill">
-              <img
-                src={habilidades[index].icon}
-                alt={habilidades[index].name}
-                height="50"
-                width="50"
-              />
-              <p>{habilidades[index].name}</p>{" "}
+            <div className="skills-container">
+              {[...Array(itemsPerPage)].map((_, i) => {
+                const index = (startIndex + i) % habilidades.length;
+                const skill = habilidades[index];
+                return (
+                  <div key={index} className="skill">
+                    <div className="skill-icon">
+                      <img src={skill.icon} alt={skill.name} />
+                    </div>
+                    <p>{skill.name}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
 
         <div className="btn-inferior-seta">
-          <button onClick={prevSkill}>
+          <button onClick={prevSlide}>
             <ChevronLeft size={24} />
           </button>
-          <button onClick={nextSkill}>
+          <button onClick={nextSlide}>
             <ChevronRight size={24} />
           </button>
         </div>

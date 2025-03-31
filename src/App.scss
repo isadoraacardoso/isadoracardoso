@@ -627,100 +627,79 @@ main {
     }
   }
 
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+  }
+
+  @media (max-width: 1024px) {
+    .skills-container {
+      gap: 40px;
+      padding: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills-container {
+      gap: 30px;
+      padding: 25px;
+    }
+  }
+
   .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 350px;
-    height: 300px;
-    padding: 15px;
-    transition: transform 0.3s ease;
   }
 
-  .skill img {
-    width: 70px;
+  .skill-icon {
+    background: white;
+    width: 120px; /* Aumentei o tamanho do círculo */
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .skill-icon img {
+    width: 70px; /* Aumentei o tamanho do ícone */
     height: 70px;
   }
 
   .skill p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    text-align: center;
   }
 
+  /* Botões de navegação colados no centro */
   .btn-inferior-seta {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-
-    button {
-      border: none;
-      display: flex;
-      width: 50px;
-      height: 50px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding-left: 0;
-      padding-right: 0;
-      margin-left: 0;
-      margin-right: 0;
-
-      &:first-child {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-
-      &:last-child {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-
-      svg {
-        color: $bg-primary;
-        width: 24px;
-        height: 24px;
-      }
-    }
   }
 
-  @media (max-width: 768px) {
-    .container {
-      max-width: 90%;
-    }
-
-    .section {
-      max-width: 100%;
-    }
-
-    .skill {
-      width: clamp(120px, 22vw, 180px); /* Aumentei o tamanho das imagens */
-      height: 300px;
-      width: 300px;
-      transition: transform 0.3s ease;
-    }
-
-    .btn-inferior-seta button {
-      width: 40px;
-      height: 40px;
-    }
+  .btn-inferior-seta button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  @media (max-width: 480px) {
-    .skill {
-      width: clamp(120px, 22vw, 180px); /* Aumentei o tamanho das imagens */
-      height: 200px;
-      width: 200px;
-      transition: transform 0.3s ease;
-    }
+  .btn-inferior-seta button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
-    .btn-inferior-seta button {
-      width: 35px;
-      height: 35px;
-    }
+  .btn-inferior-seta button svg {
+    color: black;
+    width: 24px;
+    height: 24px;
   }
 }
 
