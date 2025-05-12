@@ -697,6 +697,18 @@ main {
     border-bottom-left-radius: 0;
     margin-left: -1px; /* Remove qualquer espaço entre os botões */
   }
+
+  .title-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+
+    h2 {
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 .footer {

@@ -1,5 +1,6 @@
 import ListaProjetos from "@/components/ListaProjetos";
 import React, { useState } from "react";
+import "./App.scss";
 
 function Projetos() {
   const [index, setIndex] = useState(0);
@@ -7,8 +8,11 @@ function Projetos() {
   return (
     <main>
       <div>
-        <div className="title">
-          <h1>Meus Projetos</h1>
+        <div>
+          <h2 className="title-projects">
+            Meus projetos 🚀
+            <br />
+          </h2>
         </div>
         <ListaProjetos />
       </div>

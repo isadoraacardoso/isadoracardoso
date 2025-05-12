@@ -62,7 +62,7 @@ function Habilidades() {
     <main>
       <section className="container">
         <div className="title">
-          <h2>Habilidades</h2>
+          <h2>Minhas Habilidades 🔥</h2>
         </div>
         <div className="section">
           <div className="carousel">
