@@ -5,7 +5,6 @@ type CardProps = {
   titulo: string;
   descricao: string;
   imagem: string;
-  autor: string;
   linkProjeto: string;
   linkGithub: string;
   tags?: string[];
@@ -15,7 +14,6 @@ export default function CardProjetos({
   titulo,
   descricao,
   imagem,
-  autor,
   linkProjeto,
   linkGithub,
   tags = [],
@@ -28,19 +26,18 @@ export default function CardProjetos({
       {tags.length > 0 && <p className={styles.tags}>{tags.join(" • ")}</p>}
 
       <h3 className={styles.titulo}>{titulo}</h3>
-      <span className={styles.autor}>@{autor}</span>
       <p className={styles.descricao}>{descricao}</p>
       <div className={styles.botoes}>
         <a href={linkProjeto} target="_blank" rel="noopener noreferrer">
           <button className={`{styles.botoes} ${isOpen ? "active" : ""}`}>
-            <div className="btn-face-white">Contato</div>
-            <div className="btn-face-purple">Contato</div>
+            <div className="btn-face-white">Ver</div>
+            <div className="btn-face-purple">Ver</div>
           </button>
         </a>
         <a href={linkGithub} target="_blank" rel="noopener noreferrer">
           <button className={`{styles.botoes} ${isOpen ? "active" : ""}`}>
-            <div className="btn-face-white">Contato</div>
-            <div className="btn-face-purple">Contato</div>
+            <div className="btn-face-white">GitHub</div>
+            <div className="btn-face-purple">GitHub</div>
           </button>
         </a>
       </div>

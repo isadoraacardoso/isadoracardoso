@@ -19,33 +19,26 @@
   width: 100%;
   height: auto;
   object-fit: contain; // mantém proporção da imagem sem cortar
-  border-bottom: 2px solid #f0f0f0;
-  border-radius: 40px;
+  border-radius: 30px;
 }
 
 .tags {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #ffffff;
   margin: 0.5rem 0;
 }
 
 .titulo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin: 20px 0 10px;
+  margin: 10px 0 5px;
   color: #ffffff;
 }
 
 .descricao {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #ffffff;
-  padding: 0 20px;
   margin-bottom: 15px;
-}
-
-.autor {
-  font-size: 0.875rem;
-  color: #ffffff;
 }
 
 .botoes {
