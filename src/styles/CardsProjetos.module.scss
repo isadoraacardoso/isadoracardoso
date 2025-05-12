@@ -9,6 +9,12 @@
   text-align: left; // garante alinhamento do texto
   transition: transform 0.3s ease-in-out;
   padding: 10px;
+
+  /* Responsividade: ajuste no card para telas menores */
+  @media (max-width: 768px) {
+    max-width: 100%; /* Faz com que o card ocupe 100% da largura */
+    padding: 15px; /* Aumenta o padding para que o card tenha mais espaço */
+  }
 }
 
 .card:hover {
@@ -20,6 +26,10 @@
   height: auto;
   object-fit: contain; // mantém proporção da imagem sem cortar
   border-radius: 30px;
+
+  @media (max-width: 768px) {
+    border-radius: 15px; /* Reduz o border-radius em telas pequenas */
+  }
 }
 
 .tags {
@@ -33,6 +43,10 @@
   font-weight: bold;
   margin: 10px 0 5px;
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem; /* Aumenta o tamanho do título em telas pequenas */
+  }
 }
 
 .descricao {
@@ -86,6 +100,12 @@
         display: flex;
         animation: appear 300ms linear 150ms forwards;
       }
+    }
+
+    /* Responsividade: ajusta o tamanho dos botões em telas pequenas */
+    @media (max-width: 768px) {
+      font-size: 10px; /* Reduz o tamanho da fonte */
+      padding: 6px 10px;
     }
   }
 }
