@@ -1,5 +1,7 @@
 import CardProjetos from "@/components/CardsProjetos";
 import styles from "@/styles/listaProjetos.module.scss";
+import { useState } from "react";
+import Categorias from "./Categorias";
 
 export default function ListaProjetos() {
   const projetos = [
@@ -10,6 +12,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
+      categoria: ["React"],
     },
     {
       titulo: "Catálogo de Acessórios",
@@ -18,6 +21,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
+      categoria: ["React"],
     },
     {
       titulo: "Portfólio Pessoal",
@@ -26,6 +30,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
+      categoria: ["WordPress"],
     },
     {
       titulo: "Portfólio Pessoal",
@@ -34,6 +39,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
+      categoria: ["React", "WordPress"],
     },
     {
       titulo: "Portfólio Pessoal",
@@ -42,22 +48,41 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
+      categoria: ["React"],
     },
     // Adicione mais projetos aqui
   ];
 
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos");
+
+  const projetosFiltrados =
+    categoriaSelecionada === "Todos"
+      ? projetos
+      : projetos.filter((proj) =>
+          categoriaSelecionada === "Todos"
+            ? true
+            : proj.categoria.includes(categoriaSelecionada)
+        );
+
   return (
-    <div className={styles.grid}>
-      {projetos.map((projeto, index) => (
-        <div
-          key={index}
-          className={`${styles.cardWrapper} ${
-            index % 2 === 0 ? styles.up : styles.down
-          }`}
-        >
-          <CardProjetos {...projeto} />
-        </div>
-      ))}
-    </div>
+    <>
+      <Categorias
+        onSelecionar={setCategoriaSelecionada}
+        categoriaAtual={categoriaSelecionada}
+      />
+
+      <div className={styles.grid}>
+        {projetosFiltrados.map((projeto, index) => (
+          <div
+            key={index}
+            className={`${styles.cardWrapper} ${
+              index % 2 === 0 ? styles.up : styles.down
+            }`}
+          >
+            <CardProjetos {...projeto} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
