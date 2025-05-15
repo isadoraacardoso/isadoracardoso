@@ -1,10 +1,10 @@
-import { FaReact, FaWordpress, FaThLarge } from "react-icons/fa";
+import { FaCode, FaWordpress, FaThLarge } from "react-icons/fa";
 import styles from "@/styles/Categorias.module.scss";
 
 // Tipagem para as categorias
 type Categoria = {
   nome: string;
-  icone: string;
+  icone: React.ReactNode;
 };
 
 type CategoriaProps = {
@@ -17,26 +17,31 @@ export default function Categorias({
   categoriaAtual,
 }: CategoriaProps) {
   const categorias: Categoria[] = [
-    { nome: "Todos", icone: "🛍️" },
     {
-      nome: "React",
-      icone: "🎯",
+      nome: "Todos",
+      icone: <FaThLarge className={styles.iconeTodos} />,
     },
-    { nome: "WordPress", icone: "🔥" },
+    {
+      nome: "All Code",
+      icone: <FaCode className={styles.iconeTodos} />,
+    },
+    { nome: "WordPress", icone: <FaWordpress className={styles.iconeTodos} /> },
   ];
 
   return (
     <div className={styles.categorias}>
       {categorias.map((cat) => (
-        <button
-          key={cat.nome}
-          onClick={() => onSelecionar(cat.nome)}
-          className={`${styles.categoria} ${
-            categoriaAtual === cat.nome ? styles.ativa : ""
-          }`}
-        >
-          <span className={styles.icone}>{cat.icone}</span>
-        </button>
+        <div key={cat.nome} className={styles.itemCategoria}>
+          <button
+            onClick={() => onSelecionar(cat.nome)}
+            className={`${styles.categoria} ${
+              categoriaAtual === cat.nome ? styles.ativa : ""
+            }`}
+          >
+            <span className={styles.icone}>{cat.icone}</span>
+          </button>
+          <span className={styles.nome}>{cat.nome}</span>
+        </div>
       ))}
     </div>
   );

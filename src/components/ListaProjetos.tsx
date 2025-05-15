@@ -12,7 +12,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["React"],
+      categoria: ["All Code"],
     },
     {
       titulo: "Catálogo de Acessórios",
@@ -21,7 +21,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["React"],
+      categoria: ["All Code"],
     },
     {
       titulo: "Portfólio Pessoal",
@@ -39,7 +39,7 @@ export default function ListaProjetos() {
       linkProjeto: "https://isadoraacardoso.github.io/portifolio",
       linkGithub: "https://github.com/isadoraacardoso/portifolio",
       tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["React", "WordPress"],
+      categoria: ["All Code", "WordPress"],
     },
     {
       titulo: "Portfólio Pessoal",
