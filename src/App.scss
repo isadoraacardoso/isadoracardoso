@@ -626,55 +626,44 @@ main {
       margin: -40px;
     }
   }
-
-  .skills-container {
+  .skills-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    padding: 100px;
+    gap: 2rem;
+    padding: 2rem 1rem;
   }
 
-  @media (max-width: 1024px) {
-    .skills-container {
-      gap: 40px;
-      padding: 40px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .skills-container {
-      gap: 30px;
-      padding: 25px;
-    }
-  }
-
-  .skill {
+  .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100px;
   }
 
   .skill-icon {
-    background: white;
-    width: 120px; /* Aumentei o tamanho do círculo */
-    height: 120px;
-    border-radius: 50%;
+    background: #351348;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    transition: transform 0.3s ease;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
-  .skill-icon img {
-    width: 70px; /* Aumentei o tamanho do ícone */
-    height: 70px;
-  }
-
-  .skill p {
-    font-size: 18px;
-    font-weight: bold;
+  .skill-name {
+    margin-top: 10px;
+    font-size: 14px;
     text-align: center;
   }
 
@@ -703,9 +692,9 @@ main {
     align-items: center;
     justify-content: center;
     padding: 60px;
-    background: linear-gradient(45deg, #7223cf, #da2eb8);
-    -webkit-background-clip: text; /* Usa o fundo para recortar o texto */
-    -webkit-text-fill-color: transparent; /* Torna o interior do texto transparente para exibir o gradiente */
+    /*background: linear-gradient(45deg, #7223cf, #da2eb8);
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent; */
 
     h2 {
       align-items: center;

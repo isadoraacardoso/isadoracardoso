@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.scss';
+import React, { useState } from "react";
+import "./App.scss";
 
 function Index() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,21 +9,20 @@ function Index() {
   };
 
   return (
-    
     <main>
-
-      <div className='content-container'>
-        <h1>Olá,<br />Eu sou Isadora <br />Desenvolvedora Front End</h1>
-        <div className='bubble target'>🎯</div>
-        <div className='bubble shop'>🛍️</div>
-        <div className='bubble rocket'>🔥</div>
-        <div className='bubble fire'>🚀</div>
+      <div className="content-container">
+        <h1>
+          Olá,
+          <br />
+          Eu sou Isadora <br />
+          Desenvolvedora de Software
+        </h1>
+        <div className="bubble target">🎯</div>
+        <div className="bubble shop">🛍️</div>
+        <div className="bubble rocket">🔥</div>
+        <div className="bubble fire">🚀</div>
       </div>
-
     </main>
-
-
-
   );
 }
 

@@ -65,24 +65,24 @@ export default function ListaProjetos() {
         );
 
   return (
-    <>
-      <Categorias
-        onSelecionar={setCategoriaSelecionada}
-        categoriaAtual={categoriaSelecionada}
-      />
+    // <>
+    //<Categorias
+    // onSelecionar={setCategoriaSelecionada}
+    // categoriaAtual={categoriaSelecionada}
+    // />
 
-      <div className={styles.grid}>
-        {projetosFiltrados.map((projeto, index) => (
-          <div
-            key={index}
-            className={`${styles.cardWrapper} ${
-              index % 2 === 0 ? styles.up : styles.down
-            }`}
-          >
-            <CardProjetos {...projeto} />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className={styles.grid}>
+      {projetosFiltrados.map((projeto, index) => (
+        <div
+          key={index}
+          className={`${styles.cardWrapper} ${
+            index % 2 === 0 ? styles.up : styles.down
+          }`}
+        >
+          <CardProjetos {...projeto} />
+        </div>
+      ))}
+    </div>
+    // </>
   );
 }

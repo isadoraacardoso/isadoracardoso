@@ -60,36 +60,21 @@ function Habilidades() {
 
   return (
     <main>
-      <section className="container">
-        <div className="title">
-          <h2>Minhas Habilidades 🔥</h2>
+      <section>
+        <div className="title-projects">
+          <h2>
+            Habilidades <span className="emoji">🔥</span>
+          </h2>
         </div>
-        <div className="section">
-          <div className="carousel">
-            <div className="skills-container">
-              {[...Array(itemsPerPage)].map((_, i) => {
-                const index = (startIndex + i) % habilidades.length;
-                const skill = habilidades[index];
-                return (
-                  <div key={index} className="skill">
-                    <div className="skill-icon">
-                      <img src={skill.icon} alt={skill.name} />
-                    </div>
-                    <p>{skill.name}</p>
-                  </div>
-                );
-              })}
+        <div className="skills-grid">
+          {habilidades.map((skill, index) => (
+            <div key={index} className="skill-item">
+              <div className="skill-icon">
+                <img src={skill.icon} alt={skill.name} />
+              </div>
+              <p className="skill-name">{skill.name}</p>
             </div>
-          </div>
-        </div>
-
-        <div className="btn-inferior-seta">
-          <button onClick={prevSlide}>
-            <ChevronLeft size={24} />
-          </button>
-          <button onClick={nextSlide}>
-            <ChevronRight size={24} />
-          </button>
+          ))}
         </div>
       </section>
     </main>
