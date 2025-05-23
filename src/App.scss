@@ -703,10 +703,20 @@ main {
     align-items: center;
     justify-content: center;
     padding: 60px;
+    background: linear-gradient(45deg, #7223cf, #da2eb8);
+    -webkit-background-clip: text; /* Usa o fundo para recortar o texto */
+    -webkit-text-fill-color: transparent; /* Torna o interior do texto transparente para exibir o gradiente */
 
     h2 {
       align-items: center;
       justify-content: center;
+    }
+
+    .emoji {
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: initial;
+      background: none;
+      margin-left: 8px;
     }
   }
 }

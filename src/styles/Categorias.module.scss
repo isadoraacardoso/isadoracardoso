@@ -38,21 +38,20 @@
 .icone {
   width: 50px;
   height: 50px;
-  background: #351348;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
   transition: transform 0.3s ease;
+  background: linear-gradient(45deg, #7223cf, #da2eb8);
+  -webkit-background-clip: text; /* Usa o fundo para recortar o texto */
+  -webkit-text-fill-color: transparent; /* Torna o interior do texto transparente para exibir o gradiente */
+  cursor: pointer;
 }
 
 .iconeTodos {
-  background: linear-gradient(45deg, #7223cf, #da2eb8);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  color: linear-gradient(45deg, #7223cf, #da2eb8);
 }
 
 .ativa .icone {

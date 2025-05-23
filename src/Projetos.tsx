@@ -10,7 +10,7 @@ function Projetos() {
       <div>
         <div>
           <h2 className="title-projects">
-            Meus projetos 🚀
+            Meus projetos <span className="emoji"> 🚀</span>
             <br />
           </h2>
         </div>
