@@ -324,8 +324,10 @@ main {
     }
 
     .content-container {
+      max-height: fit-content;
       h1 {
-        font-size: 28px; // Tamanho da fonte ainda menor
+        font-size: 28px;
+        padding-left: 20px;
       }
     }
 
