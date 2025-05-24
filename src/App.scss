@@ -362,37 +362,41 @@ main {
 
   .contato {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-    font-size: 30px;
-
-    h1 {
-      padding-bottom: 30px;
-    }
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 350px;
+    font-size: 10px;
 
     .link-contato {
       display: flex;
-      align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+      align-items: flex-end;
       text-decoration: none; /* Remove a sublinhado dos links */
       padding: 15px 0; /* Espaçamento entre os itens */
       color: white;
     }
 
     .link-contato svg {
-      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-      width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
-      height: 30px;
+      margin-right: 10px;
+      width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+      height: 20px;
       fill: currentColor; /* Faz o ícone herdar a cor do texto */
-    }
-
-    .link-contato p {
-      margin: 0; /* Remove o espaçamento padrão do parágrafo */
-      font-size: 22px; /* Ajuste o tamanho da fonte conforme necessário */
     }
 
     .link-contato:hover {
       color: $color-primary;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 300px;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 120px;
+      padding-bottom: 0;
+      font-size: 12px;
     }
   }
 
@@ -411,6 +415,14 @@ main {
       padding: 20px;
       border-bottom: 0.5px solid white;
       width: 80%;
+    }
+
+    .section-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      width: 90%;
     }
 
     .section {
@@ -544,88 +556,6 @@ main {
     }
   }
 
-  .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .btn-carousel {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem; /* Tamanho padrão dos botões */
-
-    &:hover {
-      transform: scale(1.3);
-    }
-  }
-
-  .projetos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    transition: transform 0.3s ease;
-  }
-
-  .projetos img {
-    width: 90%; /* Garante que a imagem se ajuste ao container */
-    max-width: 900px; /* Mantém um limite para telas grandes */
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-
-  /* Responsividade */
-  @media (max-width: 1024px) {
-    .carousel {
-      gap: 15px;
-    }
-
-    .btn-carousel {
-      font-size: 2.5rem; /* Reduz um pouco os botões */
-    }
-
-    .projetos img {
-      max-width: 700px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .carousel {
-      gap: 10px;
-    }
-
-    .btn-carousel {
-      font-size: 2rem; /* Diminui ainda mais os botões */
-      width: 25px;
-      height: 25px;
-    }
-
-    .projetos img {
-      max-width: 400px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .carousel {
-      gap: 5px;
-    }
-    .btn-carousel {
-      z-index: 10;
-      pointer-events: all;
-      margin: -40px;
-    }
-  }
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -667,31 +597,12 @@ main {
     text-align: center;
   }
 
-  /* Botões de navegação colados no centro */
-  .btn-inferior-seta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .btn-inferior-seta button:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: -1px; /* Remove qualquer espaço entre os botões */
-  }
-
-  .btn-inferior-seta button:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px; /* Remove qualquer espaço entre os botões */
-  }
-
   .title-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 60px;
+    padding-bottom: 20px;
     /*background: linear-gradient(45deg, #7223cf, #da2eb8);
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent; */
@@ -706,6 +617,64 @@ main {
       -webkit-text-fill-color: initial;
       background: none;
       margin-left: 8px;
+    }
+  }
+
+  .form-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    .input-row {
+      padding-top: 20px;
+      display: flex;
+      gap: 1rem;
+
+      input {
+        flex: 1;
+      }
+    }
+
+    input,
+    textarea {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background-color: white;
+      width: 100%; // ocupa toda a largura do container
+      font-size: 1rem;
+    }
+
+    .msg {
+      border-bottom: 0.5px solid white;
+      padding-bottom: 40px;
+    }
+
+    textarea {
+      height: 150px; // ajusta a altura do campo de mensagem
+      resize: vertical; // permite redimensionar apenas verticalmente (opcional)
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #666;
+    }
+  }
+
+  .btn-inferior-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .btn-inferior {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min-content;
     }
   }
 }
