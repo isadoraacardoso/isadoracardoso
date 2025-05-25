@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
+import emailjs from "emailjs-com";
 
 function Contato() {
   const [formData, setFormData] = useState({
@@ -15,16 +16,28 @@ function Contato() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Mensagem enviada por ${formData.nome}`);
-    // Aqui você pode integrar com um serviço de envio como EmailJS ou uma API
-    setFormData({ nome: "", email: "", mensagem: "" });
+
+    emailjs
+      .send(
+        "service_nvts6yk",
+        "template_irundhe",
+        formData,
+        "Vv0PiA6GIhYd-n4YZ"
+      )
+      .then(() => {
+        alert("Mensagem enviada com sucesso!");
+        setFormData({ nome: "", email: "", mensagem: "" });
+      })
+      .catch((error) => {
+        alert("Erro ao enviar mensagem: " + error.text);
+      });
   };
 
   return (
     <main>
       <section className="container">
         <div className="title">
-          <h2>Contato</h2>
+          <h2>Entre em contato comigo 🤝</h2>
         </div>
 
         <div className="section-contact">
