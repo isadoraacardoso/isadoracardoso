@@ -6,50 +6,15 @@ import Categorias from "./Categorias";
 export default function ListaProjetos() {
   const projetos = [
     {
-      titulo: "Portfólio Pessoal",
-      descricao: "Projeto feito com Next.js e TSX.",
-      imagem: "pubilc/Captura de tela 2025-03-28 111802.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://isadoraacardoso.github.io/portifolio",
-      linkGithub: "https://github.com/isadoraacardoso/portifolio",
-      tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["All Code"],
-    },
-    {
       titulo: "Catálogo de Acessórios",
-      descricao: "Catálogo com integração ao banco de dados.",
+      descricao: "Catálogo feito para uma loja de acessórios.",
       imagem: "pubilc/Captura de tela 2025-03-28 111802.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://isadoraacardoso.github.io/portifolio",
-      linkGithub: "https://github.com/isadoraacardoso/portifolio",
-      tags: ["Next.js", "Supabase", "TypeScript"],
+      linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
+      linkGithub: "https://github.com/isadoraacardoso/catalogo",
+      tags: ["TypeScript", "React", "Next.js", "Prisma"],
       categoria: ["All Code"],
     },
-    {
-      titulo: "Portfólio Pessoal",
-      descricao: "Projeto feito com Next.js e TSX.",
-      imagem: "pubilc/Captura de tela 2025-03-28 111802.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://isadoraacardoso.github.io/portifolio",
-      linkGithub: "https://github.com/isadoraacardoso/portifolio",
-      tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["WordPress"],
-    },
-    {
-      titulo: "Portfólio Pessoal",
-      descricao: "Projeto feito com Next.js e TSX.",
-      imagem: "pubilc/Captura de tela 2025-03-28 111802.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://isadoraacardoso.github.io/portifolio",
-      linkGithub: "https://github.com/isadoraacardoso/portifolio",
-      tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["All Code", "WordPress"],
-    },
-    {
-      titulo: "Portfólio Pessoal",
-      descricao: "Projeto feito com Next.js e TSX.",
-      imagem: "pubilc/Captura de tela 2025-03-28 111802.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://isadoraacardoso.github.io/portifolio",
-      linkGithub: "https://github.com/isadoraacardoso/portifolio",
-      tags: ["Next.js", "Supabase", "TypeScript"],
-      categoria: ["React"],
-    },
+
     // Adicione mais projetos aqui
   ];
 
