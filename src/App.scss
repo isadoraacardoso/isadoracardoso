@@ -666,6 +666,16 @@ main {
     }
   }
 
+  .btn-inferior {
+    &:hover {
+      background-color: #ccc; // quando passa o mouse
+    }
+
+    &:active {
+      background-color: #ccc; // enquanto clica
+    }
+  }
+
   .btn-inferior-container {
     width: 100%;
     display: flex;
@@ -678,6 +688,16 @@ main {
       align-items: center;
       justify-content: center;
       width: min-content;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: #ccc; // quando passa o mouse
+      }
+
+      &:active {
+        background-color: #ccc; // enquanto clica
+      }
     }
   }
 }

@@ -30,8 +30,8 @@ function Sobre() {
             práticas para o mundo digital.
           </p>
         </div>
-        <div className="btn-inferior">
-          <button>Currículo</button>
+        <div>
+          <button className="btn-inferior">Currículo</button>
         </div>
       </section>
     </main>
