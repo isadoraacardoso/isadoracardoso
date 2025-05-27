@@ -1,13 +1,6 @@
-import React, { useState } from "react";
 import "./App.scss";
 
 function Index() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <main>
       <div className="content-container">

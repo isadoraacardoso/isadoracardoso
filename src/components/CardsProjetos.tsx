@@ -1,5 +1,5 @@
 import styles from "@/styles/CardsProjetos.module.scss";
-import React, { useState } from "react";
+import { useState } from "react";
 
 type CardProps = {
   titulo: string;
@@ -18,7 +18,7 @@ export default function CardProjetos({
   linkGithub,
   tags = [],
 }: CardProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   return (
     <div className={styles.card}>

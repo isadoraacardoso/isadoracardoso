@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.scss";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Habilidades from "./Habilidades";
 import Projetos from "./Projetos";
 import Sobre from "./Sobre";

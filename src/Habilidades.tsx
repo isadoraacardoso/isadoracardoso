@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import "./App.scss";
 
 const habilidades = [
@@ -42,7 +41,6 @@ const habilidades = [
 ];
 
 function Habilidades() {
-  const [startIndex, setStartIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(4);
 
   useEffect(() => {
@@ -59,16 +57,6 @@ function Habilidades() {
     window.addEventListener("resize", updateItemsPerPage);
     return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
-
-  const nextSlide = () => {
-    setStartIndex((prev) => (prev + 1) % habilidades.length);
-  };
-
-  const prevSlide = () => {
-    setStartIndex(
-      (prev) => (prev - 1 + habilidades.length) % habilidades.length
-    );
-  };
 
   return (
     <main>

@@ -1,10 +1,7 @@
 import ListaProjetos from "@/components/ListaProjetos";
-import React, { useState } from "react";
 import "./App.scss";
 
 function Projetos() {
-  const [index, setIndex] = useState(0);
-
   return (
     <main>
       <div>

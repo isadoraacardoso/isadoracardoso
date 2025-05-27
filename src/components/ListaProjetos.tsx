@@ -1,7 +1,5 @@
 import CardProjetos from "@/components/CardsProjetos";
 import styles from "@/styles/listaProjetos.module.scss";
-import { useState } from "react";
-import Categorias from "./Categorias";
 
 export default function ListaProjetos() {
   const projetos = [
@@ -30,26 +28,9 @@ export default function ListaProjetos() {
     // Adicione mais projetos aqui
   ];
 
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos");
-
-  const projetosFiltrados =
-    categoriaSelecionada === "Todos"
-      ? projetos
-      : projetos.filter((proj) =>
-          categoriaSelecionada === "Todos"
-            ? true
-            : proj.categoria.includes(categoriaSelecionada)
-        );
-
   return (
-    // <>
-    //<Categorias
-    // onSelecionar={setCategoriaSelecionada}
-    // categoriaAtual={categoriaSelecionada}
-    // />
-
     <div className={styles.grid}>
-      {projetosFiltrados.map((projeto, index) => (
+      {projetos.map((projeto, index) => (
         <div
           key={index}
           className={`${styles.cardWrapper} ${
@@ -60,6 +41,5 @@ export default function ListaProjetos() {
         </div>
       ))}
     </div>
-    // </>
   );
 }
