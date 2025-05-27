@@ -14,6 +14,18 @@ export default function ListaProjetos() {
       tags: ["TypeScript", "React", "Next.js", "Prisma"],
       categoria: ["All Code"],
     },
+    {
+      titulo: "Hospedagem de Pets",
+      descricao:
+        "Meu primeiro projeto colaborativo desenvolvido no contexto acadêmico, focado em criar uma plataforma para unir tutores de animais de estimação e pet sitters.",
+      imagem: "pubilc/Captura de tela 2025-05-26 223126.png", // Lembre-se de colocar o caminho correto
+      linkProjeto:
+        "https://icei-puc-minas-pmv-si.github.io/pmv-si-2023-1-e1-proj-web-t1-hospedagem-de-pets/src/",
+      linkGithub:
+        "https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-1-e1-proj-web-t1-hospedagem-de-pets",
+      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      categoria: ["All Code"],
+    },
 
     // Adicione mais projetos aqui
   ];
