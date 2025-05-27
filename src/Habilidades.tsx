@@ -41,23 +41,6 @@ const habilidades = [
 ];
 
 function Habilidades() {
-  const [itemsPerPage, setItemsPerPage] = useState(4);
-
-  useEffect(() => {
-    const updateItemsPerPage = () => {
-      if (window.innerWidth <= 480) {
-        setItemsPerPage(2);
-      } else if (window.innerWidth <= 768) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(5);
-      }
-    };
-    updateItemsPerPage();
-    window.addEventListener("resize", updateItemsPerPage);
-    return () => window.removeEventListener("resize", updateItemsPerPage);
-  }, []);
-
   return (
     <main>
       <section>
