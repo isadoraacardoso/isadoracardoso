@@ -10,7 +10,15 @@ export default function ListaProjetos() {
       linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/catalogo",
       tags: ["TypeScript", "React", "Next.js", "Prisma"],
-      categoria: ["All Code"],
+    },
+    {
+      titulo: "Auxílio Alimentação",
+      descricao:
+        "Aplicação web desenvolvida para o RH da Prefeitura, automatizando o cálculo proporcional do auxílio-alimentação e agilizando relatórios mensais com base nos dias trabalhados pelos servidores.",
+      imagem: "pubilc/Captura de tela 2025-05-27 194116.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://auxilio-alimentacao.vercel.app/auth",
+      linkGithub: "https://github.com/isadoraacardoso/auxilio-alimentacao",
+      tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
     },
     {
       titulo: "Hospedagem de Pets",
@@ -22,7 +30,6 @@ export default function ListaProjetos() {
       linkGithub:
         "https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-1-e1-proj-web-t1-hospedagem-de-pets",
       tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      categoria: ["All Code"],
     },
 
     // Adicione mais projetos aqui
