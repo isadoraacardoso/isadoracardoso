@@ -16,18 +16,27 @@ function Sobre() {
         </div>
         <div className="section">
           <p>
-            Sou Isadora Cardoso, estudante de Sistemas de Informação na PUC
-            Minas, apaixonada por desenvolvimento front-end. <br /> <br />
+            Olá! :) <br />
+            <br />
+            Sou Isadora Cardoso, desenvolvedora de software e estudante de
+            Sistemas de Informação na PUC Minas, atualmente no 5º período.
             Desenvolvo soluções digitais focadas na experiência do usuário,
-            utilizando tecnologias como React, TypeScript e Prisma. Já
-            participei de projetos acadêmicos e extensionistas, incluindo o
-            desenvolvimento de sistemas colaborativos e aplicações web. Também
-            atuei como monitora de disciplinas de desenvolvimento web frontend e
-            de git, ajudando outros alunos a aprimorarem suas habilidades.{" "}
+            utilizando tecnologias como TypeScript, React e Next.js. <br />{" "}
+            <br />
+            Tenho experiência prática no desenvolvimento de aplicações web,
+            desde a criação de interfaces até a conexão com banco de dados.
+            Participei de projetos acadêmicos e pessoais, com foco no
+            desenvolvimento de funcionalidades voltadas para a experiência do
+            usuário.
             <br />
             <br />
-            Atualmente estou desenvolvendo projetos pessoais para criar soluções
-            práticas para o mundo digital.
+            Atuo também como monitora nas disciplinas de Desenvolvimento Web,
+            Git e Projetos, ajudando colegas a superarem desafios técnicos e
+            fortalecendo ainda mais meu próprio aprendizado.
+            <br />
+            <br />
+            Atualmente estou desenvolvendo projetos pessoais com propósito de
+            crescer como profissional na área de tecnologia.
           </p>
         </div>
         <div>
