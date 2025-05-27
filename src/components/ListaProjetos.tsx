@@ -21,6 +21,14 @@ export default function ListaProjetos() {
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
     },
     {
+      titulo: "Curso de Automaquiagem",
+      descricao: "Landing page para um curso de automaquiagem fictício.",
+      imagem: "pubilc/Captura de tela 2025-05-27 204403.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://curso-de-maquiagem.vercel.app/",
+      linkGithub: "https://github.com/isadoraacardoso/curso-de-maquiagem",
+      tags: ["TypeScript", "React", "Tailwind CSS", "Vite"],
+    },
+    {
       titulo: "Hospedagem de Pets",
       descricao:
         "Meu primeiro projeto colaborativo desenvolvido no contexto acadêmico, focado em criar uma plataforma para unir tutores de animais de estimação e pet sitters.",
