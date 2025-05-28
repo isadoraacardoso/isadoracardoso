@@ -21,7 +21,7 @@ function App() {
           <div className="logo-container">
             <img src="./" alt="" />
             <div className="logo-text">
-              <Link to="/index">
+              <Link to="/">
                 <a className="logo-text-bold">
                   Isadora <br />
                   Cardoso
@@ -57,7 +57,7 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/index" element={<Index />} />
+          <Route path="/" element={<Index />} />
           <Route path="/habilidades" element={<Habilidades />} />
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/sobre" element={<Sobre />} />
