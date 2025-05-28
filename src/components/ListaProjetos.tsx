@@ -16,7 +16,7 @@ export default function ListaProjetos() {
       descricao:
         "Aplicação web desenvolvida para o RH da Prefeitura, automatizando o cálculo proporcional do auxílio-alimentação e agilizando relatórios mensais com base nos dias trabalhados pelos servidores.",
       imagem: "/auxalt.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://auxilio-alimentacao.vercel.app/auth",
+      linkProjeto: "https://auxilio-alimentacao.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/auxilio-alimentacao",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
     },
