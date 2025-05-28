@@ -23,7 +23,7 @@ export default function ListaProjetos() {
     {
       titulo: "Curso de Automaquiagem",
       descricao: "Landing page para um curso de automaquiagem fictício.",
-      imagem: "/make", // Lembre-se de colocar o caminho correto
+      imagem: "/make.png", // Lembre-se de colocar o caminho correto
       linkProjeto: "https://curso-de-maquiagem.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/curso-de-maquiagem",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite"],
