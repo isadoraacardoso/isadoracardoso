@@ -6,7 +6,7 @@ export default function ListaProjetos() {
     {
       titulo: "Catálogo de Acessórios",
       descricao: "Catálogo feito para uma loja de acessórios.",
-      imagem: "public/lnacessorios.png", // Lembre-se de colocar o caminho correto
+      imagem: "/lnacessorios.png", // Lembre-se de colocar o caminho correto
       linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/catalogo",
       tags: ["TypeScript", "React", "Next.js", "Prisma"],
@@ -15,7 +15,7 @@ export default function ListaProjetos() {
       titulo: "Auxílio Alimentação",
       descricao:
         "Aplicação web desenvolvida para o RH da Prefeitura, automatizando o cálculo proporcional do auxílio-alimentação e agilizando relatórios mensais com base nos dias trabalhados pelos servidores.",
-      imagem: "public/auxalt.png", // Lembre-se de colocar o caminho correto
+      imagem: "/auxalt.png", // Lembre-se de colocar o caminho correto
       linkProjeto: "https://auxilio-alimentacao.vercel.app/auth",
       linkGithub: "https://github.com/isadoraacardoso/auxilio-alimentacao",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
@@ -23,7 +23,7 @@ export default function ListaProjetos() {
     {
       titulo: "Curso de Automaquiagem",
       descricao: "Landing page para um curso de automaquiagem fictício.",
-      imagem: "public/make", // Lembre-se de colocar o caminho correto
+      imagem: "/make", // Lembre-se de colocar o caminho correto
       linkProjeto: "https://curso-de-maquiagem.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/curso-de-maquiagem",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite"],
@@ -32,7 +32,7 @@ export default function ListaProjetos() {
       titulo: "Hospedagem de Pets",
       descricao:
         "Meu primeiro projeto colaborativo desenvolvido no contexto acadêmico, focado em criar uma plataforma para unir tutores de animais de estimação e pet sitters.",
-      imagem: "public/pet.png", // Lembre-se de colocar o caminho correto
+      imagem: "/pet.png", // Lembre-se de colocar o caminho correto
       linkProjeto:
         "https://icei-puc-minas-pmv-si.github.io/pmv-si-2023-1-e1-proj-web-t1-hospedagem-de-pets/src/",
       linkGithub:

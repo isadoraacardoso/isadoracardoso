@@ -34,11 +34,7 @@ function Sobre() {
         </div>
         <div>
           <button className="btn-inferior">
-            <a
-              href="public/curriculo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
               Currículo
             </a>
           </button>
