@@ -4,12 +4,13 @@ import styles from "@/styles/listaProjetos.module.scss";
 export default function ListaProjetos() {
   const projetos = [
     {
-      titulo: "Catálogo de Acessórios",
-      descricao: "Catálogo feito para uma loja de acessórios.",
-      imagem: "/lnacessorios.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
-      linkGithub: "https://github.com/isadoraacardoso/catalogo",
-      tags: ["TypeScript", "React", "Next.js", "Prisma"],
+      titulo: "IN +",
+      descricao:
+        "Projeto criado como parte de uma iniciativa acadêmica externa para causas sociais, objetivo de promover a inclusão por meio de uma aplicação web acessível e informativa.",
+      imagem: "/in.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://in-plus.vercel.app/",
+      linkGithub: "https://github.com/isadoraacardoso/in-plus",
+      tags: ["TypeScript", "React", "Tailwind CSS", "Vite"],
     },
     {
       titulo: "Auxílio Alimentação",
@@ -19,6 +20,14 @@ export default function ListaProjetos() {
       linkProjeto: "https://auxilio-alimentacao.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/auxilio-alimentacao",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
+    },
+    {
+      titulo: "Catálogo de Acessórios",
+      descricao: "Catálogo feito para uma loja de acessórios.",
+      imagem: "/lnacessorios.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
+      linkGithub: "https://github.com/isadoraacardoso/catalogo",
+      tags: ["TypeScript", "React", "Next.js", "Node.js", "Prisma"],
     },
     {
       titulo: "Curso de Automaquiagem",
@@ -39,8 +48,6 @@ export default function ListaProjetos() {
         "https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-1-e1-proj-web-t1-hospedagem-de-pets",
       tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     },
-
-    // Adicione mais projetos aqui
   ];
 
   return (
