@@ -4,6 +4,22 @@ import styles from "@/styles/listaProjetos.module.scss";
 export default function ListaProjetos() {
   const projetos = [
     {
+      titulo: "Marques e Doria Advocacia",
+      descricao: "Site institucional criado para um escritório de advocacia.",
+      imagem: "/marquesdoria.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://www.marquesedoriaadvocacia.com.br/",
+      linkGithub: "https://github.com/isadoraacardoso/marques-doria",
+      tags: ["TypeScript", "React", "Tailwind CSS", "Supabase"],
+    },
+    {
+      titulo: "Catálogo de Acessórios",
+      descricao: "Catálogo feito para uma loja de acessórios.",
+      imagem: "/lnacessorios.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
+      linkGithub: "https://github.com/isadoraacardoso/catalogo",
+      tags: ["TypeScript", "React", "Next.js", "Node.js", "Prisma"],
+    },
+    {
       titulo: "IN +",
       descricao:
         "Projeto criado como parte de uma iniciativa acadêmica externa para causas sociais, objetivo de promover a inclusão por meio de uma aplicação web acessível e informativa.",
@@ -20,22 +36,6 @@ export default function ListaProjetos() {
       linkProjeto: "https://auxilio-alimentacao.vercel.app/",
       linkGithub: "https://github.com/isadoraacardoso/auxilio-alimentacao",
       tags: ["TypeScript", "React", "Tailwind CSS", "Vite", "Supabase"],
-    },
-    {
-      titulo: "Catálogo de Acessórios",
-      descricao: "Catálogo feito para uma loja de acessórios.",
-      imagem: "/lnacessorios.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://lnacessorioscatalogo.vercel.app/",
-      linkGithub: "https://github.com/isadoraacardoso/catalogo",
-      tags: ["TypeScript", "React", "Next.js", "Node.js", "Prisma"],
-    },
-    {
-      titulo: "Curso de Automaquiagem",
-      descricao: "Landing page para um curso de automaquiagem fictício.",
-      imagem: "/make.png", // Lembre-se de colocar o caminho correto
-      linkProjeto: "https://curso-de-maquiagem.vercel.app/",
-      linkGithub: "https://github.com/isadoraacardoso/curso-de-maquiagem",
-      tags: ["TypeScript", "React", "Tailwind CSS", "Vite"],
     },
     {
       titulo: "Hospedagem de Pets",
