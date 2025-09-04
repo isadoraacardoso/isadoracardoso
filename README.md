@@ -22,7 +22,7 @@ O projeto foi construído com responsividade, boas práticas de design e perform
 
 ## 📸 Visual do projeto
 
-https://isadoracardoso-c47h.vercel.app/
+https://isadoracardoso.vercel.app/
 
 ---
 
@@ -43,3 +43,4 @@ Sugestões são sempre bem-vindas! Sinta-se à vontade para abrir issues ou entr
 ---
 
 Feito com 💜 por **Isadora Cardoso**
+
