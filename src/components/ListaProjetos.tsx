@@ -24,6 +24,7 @@ export default function ListaProjetos() {
       descricao: "Ecommerce feito em wordPress para uma loja de acessórios.",
       imagem: "/lojaln.png", // Lembre-se de colocar o caminho correto
       linkProjeto: "https://lnacessorios.com.br/",
+      linkGithub: "",
       tags: ["WordPress", "Elementor", "WooCommerce"],
     },
     {
