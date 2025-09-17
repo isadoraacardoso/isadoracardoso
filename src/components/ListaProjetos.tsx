@@ -20,6 +20,13 @@ export default function ListaProjetos() {
       tags: ["TypeScript", "React", "Next.js", "Node.js", "Prisma"],
     },
     {
+      titulo: "Ecommerce de Acessórios",
+      descricao: "Ecommerce feito em wordPress para uma loja de acessórios.",
+      imagem: "/lojaln.png", // Lembre-se de colocar o caminho correto
+      linkProjeto: "https://lnacessorios.com.br/",
+      tags: ["WordPress", "Elementor", "WooCommerce"],
+    },
+    {
       titulo: "IN +",
       descricao:
         "Projeto criado como parte de uma iniciativa acadêmica externa para causas sociais, objetivo de promover a inclusão por meio de uma aplicação web acessível e informativa.",
